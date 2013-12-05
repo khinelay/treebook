@@ -1,17 +1,46 @@
-<!DOCTYPE html>
 <html>
+<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="../">Tree Book</a>
+	</div>
+	<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+		<ul class="nav navbar-nav" id="col">
+			 <li class="active">
+				<%= link_to "All Statuses", statuses_path %>
+			</li>
+			<li>
+				<a href="../css"> CSS erer</a>
+			</li>
+			<li>
+				<a href="../js"> JS </a>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li>
+				<a href="../about"> About</a>
+			 </li>
+
+		</ul>
+	</nav>
+</div>
 <head>
   <title>Treebook</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
+</header> 
 <body>
+	
+<div class="container"> 
+		<%= yield %>
+</div>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
 
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-<%= yield %>
     
 </body>
 </html>
+
